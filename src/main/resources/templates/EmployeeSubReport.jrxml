@@ -1,0 +1,57 @@
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd"
+              name="EmployeeSubreport"
+              language="java"
+              pageWidth="595" pageHeight="842"
+              columnWidth="555" columnSpacing="0">
+
+    <field name="id" class="java.lang.String"/>
+    <field name="name" class="java.lang.String"/>
+    <field name="email" class="java.lang.String"/>
+    <field name="position" class="java.lang.String"/>
+    <field name="salary" class="java.lang.Double"/>
+    <field name="departmentId" class="java.lang.String"/>
+
+    <!-- Employee Details (no grouping) -->
+    <detail>
+        <band height="20">
+            <!-- Employee ID -->
+            <textField>
+                <reportElement x="0" y="0" width="80" height="20"/>
+                <textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+            </textField>
+
+            <!-- Employee Name -->
+            <textField>
+                <reportElement x="90" y="0" width="120" height="20"/>
+                <textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
+            </textField>
+
+            <!-- Employee Email -->
+            <textField>
+                <reportElement x="200" y="0" width="110" height="20"/>
+                <textFieldExpression><![CDATA[$F{email}]]></textFieldExpression>
+            </textField>
+
+            <!-- Employee Position -->
+            <textField>
+                <reportElement x="320" y="0" width="100" height="20"/>
+                <textFieldExpression><![CDATA[$F{position}]]></textFieldExpression>
+            </textField>
+
+            <!-- Employee Salary -->
+            <textField>
+                <reportElement x="410" y="0" width="70" height="20"/>
+                <textFieldExpression><![CDATA[$F{salary}]]></textFieldExpression>
+            </textField>
+
+            <!-- Employee Department -->
+            <textField>
+                <reportElement x="460" y="0" width="80" height="20"/>
+                <textFieldExpression><![CDATA[$F{departmentId}]]></textFieldExpression>
+            </textField>
+        </band>
+    </detail>
+
+</jasperReport>
